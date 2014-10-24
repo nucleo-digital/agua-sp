@@ -1,0 +1,14 @@
+# Site settings
+title: Aliança pela Água
+description: O vento balança os coqueiros que moram (dançam) na beira do mar!
+analytics_id: UA-XXXXX-X
+email: test@test.com
+
+collections:
+- apresentacao
+- quem
+
+# Build settings
+markdown: kramdown
+
+gems: [jekyll-sass]

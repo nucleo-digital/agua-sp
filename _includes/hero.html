@@ -1,0 +1,13 @@
+<div class="hero">
+  {% for apresentacao in site.apresentacao %}
+    <div class="hero-inner">
+      <a href="" class="hero-logo">
+        <img src="{{ apresentacao.logo }}" alt="Logo Image">
+      </a>
+      <div class="hero-copy">
+        {{ apresentacao.content }}
+      </div>
+      <button>Learn More</button>
+    </div>
+  {% endfor %}
+</div>

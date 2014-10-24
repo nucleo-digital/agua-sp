@@ -1,0 +1,17 @@
+<section id="quem">
+  <div class="container">
+    <h2>Quem somos</h2>
+    <div class="slogan">
+      <p>Quando em tronco encontrares teu corpo feito, já teus pés em raízes vão estar procurando na terra, da água, o leito, e não mais braços, sim galhos pra se abraçar! Em árvore transmutado, poderás entender o que a força do mato já começa à dizer!</p>
+    </div>
+    <div class="cards logos">
+      {% for quem in site.quem %}
+      <div class="card">
+        <a href="javascript:void(0)" class="grid-item">
+          <img src="{{quem.image}}" alt="{{quem.title}}">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

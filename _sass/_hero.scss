@@ -1,0 +1,69 @@
+.hero {
+  $hero-background-top: darken($base-accent-color, 25);
+  $hero-background-bottom: adjust-hue($hero-background-top, -70);
+  $hero-color: #000;
+  $gradient-angle: 10deg;
+  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+
+  // @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+
+  // background-repeat: no-repeat;
+  // background-position: top;
+  // background-size: cover;
+  background: #00CCFF;
+  padding-bottom: 4em;
+
+  .hero-logo {
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    padding: 3em;
+    margin: auto;
+    text-align: center;
+    color: $hero-color;
+
+    button {
+      @include button(simple, $base-background-color);
+      font-size: $base-font-size;
+      outline: none;
+    }
+
+    .hero-copy {
+      text-align: justify;
+      margin-bottom: 2em;
+
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: .5em;
+        text-align: center;
+
+        @include media($large-screen) {
+          font-size: 1.8em;
+        }
+      }
+
+      h2,
+      p {
+        margin: auto;
+        margin-bottom: 1em;
+        font-weight: 200;
+        line-height: 1.4em;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 80%;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}

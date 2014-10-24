@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+
+.container {
+  @include outer-container;
+
+  section {
+    margin: 20px 0;
+
+    h2 {
+      @extend h3;
+      text-align: center;
+    }
+  }
+}
