@@ -32,7 +32,26 @@
     }
   });
 
-  var myDataRef = new Firebase('https://jgqia35uk80.firebaseio-demo.com/');
+  var clock;
+
+  $(document).ready(function() {
+
+    // Grab the current date
+    var currentDate = new Date();
+
+    // Set some date in the past. In this case, it's always been since Jan 1
+    var pastDate  = new Date(2014, 9, 31, 10);
+
+    // Calculate the difference in seconds between the future and current date
+    var diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+    // Instantiate a coutdown FlipClock
+    var clock = $('.quarenta-e-oito-horas').FlipClock(diff, {
+      coutdown: true
+    });
+  });
+
+  var myDataRef = new Firebase('https://popping-heat-3998.firebaseio.com/');
 
   $('#emailInput').keypress(function (e) {
     if (e.keyCode == 13) {
