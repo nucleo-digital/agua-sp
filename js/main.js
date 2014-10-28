@@ -44,7 +44,9 @@
     var diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
     // Instantiate a coutdown FlipClock
-    $('.quarenta-e-oito-horas').FlipClock(diff, {countdown: true});
+    $('.quarenta-e-oito-horas').FlipClock(diff, {
+      countdown: true
+    });
   });
 
   var myDataRef = new Firebase('https://popping-heat-3998.firebaseio.com/');

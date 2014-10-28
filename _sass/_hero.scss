@@ -1,16 +1,15 @@
 .hero {
   $hero-background-top: darken($base-accent-color, 25);
   $hero-background-bottom: adjust-hue($hero-background-top, -70);
-  $hero-color: #000;
+  $hero-color: #FFF;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+  $hero-image: '../images/bg-header.jpg';
 
-  // @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  @include background(url($hero-image));
 
-  // background-repeat: no-repeat;
-  // background-position: top;
-  // background-size: cover;
-  background: #00CCFF;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
   padding-bottom: 4em;
 
   .hero-logo {
@@ -56,7 +55,7 @@
 
         @include media($large-screen) {
           font-size: 1.1em;
-          max-width: 80%;
+          max-width: 65%;
         }
       }
 

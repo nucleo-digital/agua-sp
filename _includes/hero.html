@@ -2,13 +2,14 @@
   {% for apresentacao in site.apresentacao %}
     <div class="hero-inner">
       <a href="" class="hero-logo">
-        <img src="{{ apresentacao.logo }}" alt="Logo Image">
+        <img src="images/logo-large.svg" alt="{{ site.title }}">
       </a>
       <div class="hero-copy">
         {{ apresentacao.content }}
       </div>
-      <div class="quarenta-e-oito-horas"></div>
-      <button>Learn More</button>
+      <div class="countdown">
+        <div class="quarenta-e-oito-horas"></div>
+      </div>
     </div>
   {% endfor %}
 </div>
