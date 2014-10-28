@@ -30,25 +30,21 @@
         return svgLocation.replace(/\.svg$/, '.png');
       });
     }
-  });
 
-  var clock;
-
-  $(document).ready(function() {
-
+    /**
+     * CLOCK
+     */
     // Grab the current date
     var currentDate = new Date();
 
     // Set some date in the past. In this case, it's always been since Jan 1
-    var pastDate  = new Date(2014, 9, 31, 10);
+    var pastDate  = new Date('2014-10-31T10:00:00');
 
     // Calculate the difference in seconds between the future and current date
     var diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
     // Instantiate a coutdown FlipClock
-    var clock = $('.quarenta-e-oito-horas').FlipClock(diff, {
-      coutdown: true
-    });
+    $('.quarenta-e-oito-horas').FlipClock(diff, {countdown: true});
   });
 
   var myDataRef = new Firebase('https://popping-heat-3998.firebaseio.com/');
