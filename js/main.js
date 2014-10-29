@@ -49,21 +49,13 @@
     });
   });
 
-  var myDataRef = new Firebase('https://popping-heat-3998.firebaseio.com/');
-
   $('form#register').on('submit', function (e) {
     e.preventDefault();
 
     var name = $('#nameInput').val();
     var email = $('#emailInput').val();
 
-    myDataRef.push({name: name, email: email});
-
-    $('.registry').html(
-      '<h2>obrigado por se cadastrar!</h2>'+
-      ''
-      '<p>lorem2</p>'
-    );
+    salvarUsuario({name: name, email: email});
   });
 
   // myDataRef.on('child_added', function(snapshot) {
@@ -77,7 +69,17 @@
   // };
 })(jQuery);
 
+  var myDataRef = new Firebase('https://popping-heat-3998.firebaseio.com/');
 
+  function salvarUsuario (obj) {
+    myDataRef.push(obj);
+
+    $('.registry').html(
+      '<h2>obrigado por se cadastrar!</h2>'+
+      '<p class="centraliza"><img src="/images/icon-sucesso.svg"/></p>'+
+      '<p class="centraliza">Guardamos seus dados com sucesso, assim que tivermos uma novidade entraremos em contato!</p>'
+    );
+  }
 
   $('#fb-button').on('click', function(e) {
     e.preventDefault();
@@ -107,12 +109,8 @@
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log(response);
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+      salvarUsuario({name: response.name, email: response.email, facebook:response});
     });
   }
 
@@ -123,7 +121,8 @@ function signinCallback(authResult) {
     // console.log(authResult);
     jQuery.getJSON('https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token='+authResult['access_token'])
       .done(function(data){
-        console.log(data);
+        // console.log(data);
+        salvarUsuario({name: data.name, email: data.email, google: data});
       });
   } else if (authResult['error']) {
     // Ocorreu um erro.

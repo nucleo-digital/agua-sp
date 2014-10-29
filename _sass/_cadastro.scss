@@ -8,7 +8,11 @@
     .report-download {
       @include span-columns(6);
     }
-    
+
+    .centraliza {
+      text-align: center;
+    }
+
     [type="submit"] {
       display: block;
       width: 100%;
@@ -22,7 +26,7 @@
         content: none;
       }
     }
-    
+
     .buttons {
       @include outer-container;
 
