@@ -1,0 +1,23 @@
+#live {
+  background: #2C4F77;
+  color: white;
+
+  h2:before {
+    content: url('../images/heading-negative.png');
+  }
+  
+  .stream-share {
+    color: #87DB75;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+
+    div {
+      display: inline-block;
+      img {
+        position: relative;
+        top: 25px;
+      }
+    }
+  }
+}

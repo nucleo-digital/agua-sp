@@ -48,6 +48,17 @@
       countdown: true,
       language: 'portuguese'
     });
+
+    /**
+     * SHARE FACEBOOK
+     */
+    $('.fb-share').click(function (ev) {
+      ev.preventDefault();
+      FB.ui({
+        method: 'share',
+        href: window.location.href
+      }, function(response){});
+    });
   });
 
   $('form#register').on('submit', function (e) {
