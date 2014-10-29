@@ -11,11 +11,12 @@
 </div>
 <section id="parceiros">
   <div class="container">
-    <div class="cards logos">
+    <h3>Parceiros</h3>
+    <div class="logos">
       {% for quem in site.quem %}
-      <div class="card">
-        <a href="javascript:void(0)" class="grid-item">
-          <img src="{{quem.image}}" alt="{{quem.title}}">
+      <div class="logo">
+        <a href="javascript:void(0)">
+          <img src="images/parceiros/{{quem.image}}" alt="{{quem.title}}">
         </a>
       </div>
       {% endfor %}
