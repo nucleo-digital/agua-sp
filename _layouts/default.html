@@ -19,6 +19,21 @@
     <script src='js/vendor/flipclock/flipclock.min.js'></script>
     <script src="js/main.js"></script>
 
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '{{ site.facebook }}',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      };
+
+    </script>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!--
     <script>
