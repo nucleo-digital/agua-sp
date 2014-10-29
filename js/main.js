@@ -51,27 +51,30 @@
 
   var myDataRef = new Firebase('https://popping-heat-3998.firebaseio.com/');
 
-  $('#emailInput').keypress(function (e) {
-    if (e.keyCode == 13) {
-      var name = $('#nameInput').val();
-      var email = $('#emailInput').val();
+  $('form#register').on('submit', function (e) {
+    e.preventDefault();
 
-      myDataRef.push({name: name, email: email});
+    var name = $('#nameInput').val();
+    var email = $('#emailInput').val();
 
-      $('#nameInput').val('');
-      $('#emailInput').val('');
-    }
+    myDataRef.push({name: name, email: email});
+
+    $('.registry').html(
+      '<h2>obrigado por se cadastrar!</h2>'+
+      ''
+      '<p>lorem2</p>'
+    );
   });
 
-   myDataRef.on('child_added', function(snapshot) {
-    var message = snapshot.val();
-    displayChatMessage(message.name, message.email);
-  });
+  // myDataRef.on('child_added', function(snapshot) {
+  //   var message = snapshot.val();
+  //   displayChatMessage(message.name, message.email);
+  // });
 
-  function displayChatMessage(name, text) {
-    $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-    $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-  };
+  // function displayChatMessage(name, text) {
+  //   $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+  //   $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+  // };
 })(jQuery);
 
 
