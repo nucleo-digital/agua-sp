@@ -112,3 +112,36 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+function signinCallback(authResult) {
+  if (authResult['access_token']) {
+    // Autorizado com sucesso
+    // Ocultar o botão de login agora que o usuário está autorizado, por exemplo:
+    // console.log(authResult);
+    jQuery.getJSON('https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token='+authResult['access_token'])
+      .done(function(data){
+        console.log(data);
+      });
+  } else if (authResult['error']) {
+    // Ocorreu um erro.
+    // Possíveis códigos de erro:
+    //  "access_denied" - o usuário negou o acesso a seu aplicativo
+    //   "immediate_failed" - não foi possível fazer o login do usuário automaticamente
+    // console.log('There was an error: ' + authResult['error']);
+  }
+}
+
+(function() {
+  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+  po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+
+function render() {
+  gapi.signin.render('google-button', {
+    'callback': 'signinCallback',
+    'clientid': "624317565694-vb4f0uers8hktak2a05t5j2slb0bod1u.apps.googleusercontent.com",
+    'cookiepolicy': 'single_host_origin',
+    'scope': 'https://www.googleapis.com/auth/userinfo.email'
+  });
+}
