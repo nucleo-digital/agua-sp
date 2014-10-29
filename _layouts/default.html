@@ -17,7 +17,6 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
     <script src='js/vendor/flipclock/flipclock.min.js'></script>
-    <script src="js/main.js"></script>
 
     <script>
       window.fbAsyncInit = function() {
@@ -26,24 +25,30 @@
           xfbml      : true,
           version    : 'v2.1'
         });
-
-        // FB.getLoginStatus(function(response) {
-        //   statusChangeCallback(response);
-        // });
       };
 
-    </script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <!--
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
         e=o.createElement(i);r=o.getElementsByTagName(i)[0];
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','{{ site.title }}');ga('send','pageview');
+
+      ga('create','{{ site.analytics_id }}');ga('send','pageview');
     </script>
-    -->
+    <script src="js/main.js"></script>
   </body>
 </html>
