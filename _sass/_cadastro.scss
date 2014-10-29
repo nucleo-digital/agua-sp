@@ -1,0 +1,65 @@
+#cadastre-se {
+  padding: 3em 0;
+
+  .container {
+    @include outer-container;
+
+    .registry,
+    .report-download {
+      @include span-columns(6);
+    }
+    
+    [type="submit"] {
+      display: block;
+      width: 100%;
+      background: #2C4F77;
+      font-weight: normal;
+    }
+    
+    .buttons {
+      @include outer-container;
+
+      button {
+        @include span-columns(6);
+        font-weight: normal;
+
+        &#fb-button {
+          background: #3664A2;
+        }
+        &#google-button {
+          background: #DD4B39;
+        }
+      }
+    }
+
+    .report-download {
+      .report-box {
+        width: 320px;
+        height: 200px;
+        margin-top: 60px;
+
+        position: relative;
+
+        .box {
+          position: absolute;
+        }
+
+        .report-link {
+          width: 180px;
+          height: 160px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -40px;
+          margin-left: -90px;
+          text-align: center;
+          color: #FFF;
+
+          a {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}
