@@ -1,0 +1,14 @@
+<section id="parceiros">
+  <div class="container">
+    <h3>Parceiros</h3>
+    <div class="logos">
+      {% for quem in site.quem %}
+      <div class="logo">
+        <a href="javascript:void(0)">
+          <img src="images/parceiros/{{quem.image}}" alt="{{quem.title}}">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
