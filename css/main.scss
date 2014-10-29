@@ -25,7 +25,23 @@
   width: 460px;
 }
 
+section {
+  color: #2C4F77;
+  padding: 3em 0;
+
+  h2 {
+    text-transform: lowercase;
+    font-size: 1.25em;
+    line-height: 1.0;
+    margin-bottom: 1em;
+
+    &:before {
+      content: url('../images/heading-positive.png');
+      display: block;
+    }
+  }
+}
+
 .tinted {
   background: #87DB75;
-  color: #2C4F77;
 }

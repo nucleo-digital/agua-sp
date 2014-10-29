@@ -15,6 +15,13 @@
       background: #2C4F77;
       font-weight: normal;
     }
+
+    .social-register h2 {
+      margin-top: 1em;
+      &:before {
+        content: none;
+      }
+    }
     
     .buttons {
       @include outer-container;
