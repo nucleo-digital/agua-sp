@@ -5,6 +5,23 @@
   <meta name="description" content="{{ site.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <!--meta name="twitter:site" content="@"-->
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <!--meta name="twitter:creator" content="@"-->
+  <meta name="twitter:image" content="/images/social.png">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:type" content="site">
+  <meta property="og:url" content="http://aguasp.socioambiental.org/">
+  <meta property="og:image" content="/images/social.png">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="fb:admins" content="{{ site.facebook_id }}">
+
   <link rel="stylesheet" href="js/vendor/flipclock/flipclock.css">
   <link rel="stylesheet" href="css/main.css">
 
