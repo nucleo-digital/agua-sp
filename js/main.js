@@ -45,7 +45,8 @@
 
     // Instantiate a coutdown FlipClock
     $('.quarenta-e-oito-horas').FlipClock(diff, {
-      countdown: true
+      countdown: true,
+      language: 'portuguese'
     });
   });
 
