@@ -32,24 +32,6 @@
     }
 
     /**
-     * CLOCK
-     */
-    // Grab the current date
-    var currentDate = new Date();
-
-    // Set some date in the past. In this case, it's always been since Jan 1
-    var pastDate  = new Date('2014-10-31T10:00:00');
-
-    // Calculate the difference in seconds between the future and current date
-    var diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
-
-    // Instantiate a coutdown FlipClock
-    $('.quarenta-e-oito-horas').FlipClock(diff, {
-      countdown: true,
-      language: 'portuguese'
-    });
-
-    /**
      * SHARE FACEBOOK
      */
     $('.fb-share').click(function (ev) {
