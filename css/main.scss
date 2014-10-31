@@ -65,6 +65,7 @@ section {
     font-size: 1.25em;
     line-height: 1.0;
     margin-bottom: 1em;
+    margin-left: 1em;
   }
   h2:before {
     content: url('../images/heading-positive.png');
@@ -85,9 +86,6 @@ section {
     display:none;
   }
 
-  h2,h3 {
-    margin-left: 1em;
-  }
 
   .hero .hero-logo {
     width: 90%;
