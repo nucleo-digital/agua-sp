@@ -29,9 +29,14 @@
     }
   }
   .footer-disclaimer {
-    text-align: right;
-    width: 330px;
-    float: right;
+    @include media($medium-screen) {
+      width: 330px;
+      text-align: right;
+      float: right;
+    }
+    p {
+      margin: 0;
+    }
   }
 
   .footer-links {
