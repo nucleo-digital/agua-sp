@@ -1,4 +1,5 @@
 #parceiros {
+  padding: 0 1em;
   .logos {
     @include outer-container;
 
@@ -14,5 +15,11 @@
         clear: left;
       }
     }
+  }
+}
+
+#quem-somos {
+  .slogan {
+    padding: 0 1em;
   }
 }

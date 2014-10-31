@@ -47,7 +47,7 @@
       .report-box {
         width: 320px;
         height: 200px;
-        margin-top: 60px;
+        margin: 5em 7em;
 
         position: relative;
 
@@ -78,12 +78,13 @@
 
 
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 640px) {
   #cadastre-se {
     .container {
       .registry,
       .report-download {
         @include span-columns(12);
+        padding: 0 1em;
       }
     }
   }

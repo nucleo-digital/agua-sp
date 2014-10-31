@@ -16,21 +16,31 @@
         text-align: center;
         margin: 230px 0;
         text-transform: uppercase;
+        line-height: 1.3em;
       }
-    }
-    .box-com-espaco {
-      padding: 1.5em;
     }
 
     h4 {
-      margin-bottom: 1em;
+      margin: 2em 2.5em 1em;
     }
 
     ul.colunas {
       columns: 2;
       -webkit-columns: 2;
       -moz-columns: 2;
-      // margin: 3.5em;
+      margin: 0 4em 0;
     }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #a-crise .slider ul.colunas {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+
+  .slide {
+    height: auto;
   }
 }

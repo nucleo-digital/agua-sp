@@ -70,3 +70,21 @@
     line-height: 1.0em;
   }
 }
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    ul {
+      text-align: center;
+    }
+    .container {
+      @include outer-container;
+      .col {
+        @include span-columns(12);
+      }
+    }
+  }
+}

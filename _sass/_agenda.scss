@@ -41,3 +41,21 @@
    }
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+
+  #agenda {
+    .half {
+      width: 100%;
+      padding :0 1em;
+    }
+  }
+
+  iframe {
+    width :100%;
+  }
+    #agenda .actions .type {
+    width: 100%;
+    padding: 0 1em;
+  }
+}
