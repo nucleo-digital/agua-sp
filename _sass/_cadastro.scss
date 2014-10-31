@@ -44,39 +44,39 @@
       }
     }
 
-    .report-download {
-      .report-box {
-        width: 320px;
-        height: 200px;
-        margin: 5em 7em;
 
-        position: relative;
+  }
+}
 
-        .box {
-          position: absolute;
-        }
+.report-download {
+  .report-box {
+    width: 320px;
+    height: 200px;
+    margin: 1.3em auto 0;
 
-        .report-link {
-          width: 180px;
-          height: 160px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          margin-top: -40px;
-          margin-left: -90px;
-          text-align: center;
-          color: #FFF;
+    position: relative;
 
-          a {
-            color: inherit;
-          }
-        }
+    .box {
+      position: absolute;
+    }
+
+    .report-link {
+      width: 180px;
+      height: 160px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -40px;
+      margin-left: -90px;
+      text-align: center;
+      color: #FFF;
+
+      a {
+        color: inherit;
       }
     }
   }
 }
-
-
 
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
