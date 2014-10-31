@@ -24,6 +24,15 @@
       }
     }
   }
+  .half {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+
+    &.right {
+      text-align: right;
+    }
+  }
   ol {
    list-style-type: decimal;
    li {
