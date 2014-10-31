@@ -38,7 +38,8 @@
     var currentDate = new Date();
 
     // Set some date in the past. In this case, it's always been since Jan 1
-    var pastDate  = new Date('2014-10-31T10:00:00');
+    // var pastDate  = new Date('2014-10-31T10:00:00');
+    var pastDate  = new Date(2014, 9, 31, 10);
 
     // Calculate the difference in seconds between the future and current date
     var diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
@@ -146,3 +147,9 @@ function render() {
     'scope': 'https://www.googleapis.com/auth/userinfo.email'
   });
 }
+
+
+
+
+
+
