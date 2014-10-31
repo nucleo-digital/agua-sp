@@ -13,6 +13,7 @@
 @import "cadastro";
 @import "agenda";
 @import "live";
+@import "a-crise";
 
 @import "navigation";
 @import "hero";
@@ -28,28 +29,7 @@ $slick-loader-path: "../js/vendor/slick/";
 
 @import "../js/vendor/slick/slick";
 
-#a-crise {
-  background-color: #F0F0F0;
-  .slider {
-    > div {
-      background-color: #F0F0F0;
-      height: 457px;
-      border: 0px solid #2C4F77;
-    }
 
-    > img {
-      width: 100%;
-    }
-
-    .texto-destaque {
-      h3 {
-        text-align: center;
-        margin: 230px 0;
-        text-transform: uppercase;
-      }
-    }
-  }
-}
 .slick-prev {
   left: 25px;
 }

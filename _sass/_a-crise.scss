@@ -1,0 +1,36 @@
+#a-crise {
+  background-color: #F0F0F0;
+  .slider {
+    > div {
+      background-color: #F0F0F0;
+      height: 457px;
+      border: 0px solid #2C4F77;
+    }
+
+    > img {
+      width: 100%;
+    }
+
+    .texto-destaque {
+      h3 {
+        text-align: center;
+        margin: 230px 0;
+        text-transform: uppercase;
+      }
+    }
+    .box-com-espaco {
+      padding: 1.5em;
+    }
+
+    h4 {
+      margin-bottom: 1em;
+    }
+
+    ul.colunas {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      // margin: 3.5em;
+    }
+  }
+}
