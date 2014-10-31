@@ -1,0 +1,21 @@
+<section id="solucoes">
+  <div class="container">
+    <h2>Soluções</h2>
+    <h5>QUER SOLUCIONAR ESSES PROBLEMAS? ESCOLHA AS MELHORES INICIATIVAS OU PROPONHA A SUA.</h5>
+
+    <ul>
+      {% for solucao in site.solucoes %}
+      <li>
+        <img src="/images/solucoes/{{ solucao.image }}" alt="{{ solucao.title }}">
+        <div class="content">
+          <h6>{{ solucao.title }}</h6>
+          <p class="description">{{ solucao.description }}</p>
+          <p class="owner"><span>Instituição: </span>{{ solucao.owner }}</p>
+          <p class="category"><span>Categoria: </span>{{ solucao.category }}</p>
+          <p class="url"><span>URL: </span><a href="{{ solucao.link }}">{{ solucao.link }}</a></p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

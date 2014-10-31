@@ -13,6 +13,7 @@ twitter_share: "Campanha Água@SP mapeia atores e propostas para o enfrentamento
 collections:
 - apresentacao
 - quem
+- solucoes
 
 # Build settings
 markdown: kramdown
