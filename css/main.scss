@@ -32,9 +32,9 @@ $slick-loader-path: "../js/vendor/slick/";
   background-color: #F0F0F0;
   .slider {
     > div {
-      background-color: #eee;
+      background-color: #F0F0F0;
       height: 457px;
-      border: 1px solid #fff;
+      border: 1px solid #2C4F77;
     }
 
     > img {
@@ -48,9 +48,21 @@ $slick-loader-path: "../js/vendor/slick/";
         text-transform: uppercase;
       }
     }
-
   }
-
+}
+.slick-prev {
+  left: 25px;
+}
+.slick-next {
+  right: 25px;
+}
+.slick-prev, .slick-next {
+  height: 32px;
+  width: 32px;
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 32px;
+  color: #2C4F77;
 }
 
 textarea,
