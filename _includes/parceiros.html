@@ -4,9 +4,9 @@
     <div class="logos">
       {% for quem in site.quem %}
       <div class="logo">
-        <a href="javascript:void(0)">
+        {% if quem.link %}<a href="{{ quem.link }}">{% endif %}
           <img src="images/parceiros/{{quem.image}}" alt="{{quem.title}}">
-        </a>
+        {% if quem.link %}</a>{% endif %}
       </div>
       {% endfor %}
     </div>
