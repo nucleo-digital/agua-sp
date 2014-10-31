@@ -148,7 +148,7 @@ function render() {
   });
 }
 
-
+$('.single-item').slick();
 
 
 
