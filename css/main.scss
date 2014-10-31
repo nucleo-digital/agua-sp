@@ -28,6 +28,31 @@ $slick-loader-path: "../js/vendor/slick/";
 
 @import "../js/vendor/slick/slick";
 
+#a-crise {
+  background-color: #F0F0F0;
+  .slider {
+    > div {
+      background-color: #eee;
+      height: 457px;
+      border: 1px solid #fff;
+    }
+
+    > img {
+      width: 100%;
+    }
+
+    .texto-destaque {
+      h3 {
+        text-align: center;
+        margin: 230px 0;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+
+}
+
 textarea,
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
 select[multiple=multiple], button, input[type="submit"] {
